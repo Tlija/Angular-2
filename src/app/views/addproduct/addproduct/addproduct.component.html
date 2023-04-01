@@ -1,0 +1,33 @@
+<form ngClass="formUser" #f="ngForm" (ngSubmit)="add(f)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name="title" #title="ngModel" ngModel>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="title.errors?.['required'] && title.touched">
+    title is required
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">description</label>
+    <input type="description" class="form-control" id="exampleInputPassword1" required name="description" #description="ngModel" ngModel>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Price</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" required name="price" #price="ngModel" ngModel>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">category</label>
+    <input type="description" class="form-control" id="exampleInputPassword1" required name="category" #category="ngModel" ngModel>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">qtes</label>
+    <input type="number" class="form-control" id="exampleInputPassword1" required name="qtes" #qtes="ngModel" ngModel>
+  </div>
+
+  <button type="submit"   class="btn btn-primary">AddProduct</button>
+</form>
+<!-- qtes -->
